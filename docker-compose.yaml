@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+    postgres:
+        image: postgres:alpine3.17
+        restart: always
+        container_name: order-service
+        env_file:
+            - .env
+        volumes:
+            - ./data/postgres:/var/lib/postgresql/data/
+        ports:
+            - "5433:5432"
+
+    backend:
+        build: .
+        restart: always
+        ports:
+            - 8080:8080
+        env_file:
+            - .env
