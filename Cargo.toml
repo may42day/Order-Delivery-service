@@ -1,5 +1,5 @@
 [package]
-name = "delivery-order"
+name = "delivery_order"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,7 +9,7 @@ path = "src/lib.rs"
 
 [[bin]]
 path = "src/main.rs"
-name = "delivery-order"
+name = "delivery_order"
 
 [dependencies]
 diesel = { version = "2.0.3", features = ["postgres", "uuid", "chrono"] }
